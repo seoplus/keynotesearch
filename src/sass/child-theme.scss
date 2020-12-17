@@ -1,0 +1,101 @@
+@import 'theme/child_theme_variables'; // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import 'theme/mixins'; // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import 'assets/bootstrap4'; // <------- Loads Bootstrap4
+@import '../src/sass/understrap/understrap/understrap'; // <------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+@import '../src/sass/understrap/understrap/woocommerce'; // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+
+// Optional files - If you don´t use the corresponding scripts/fonts comment em out
+@import 'assets/font-awesome'; // <------- Font Awesome Icon font
+@import 'assets/underscores'; // <------- Underscores media styles
+
+// Any additional imported files //
+@import 'theme/child_theme'; // <------- Add your styles into this file
+@import 'theme/vendors/swiper';
+@import '../src/sass/understrap/theme/contact-form7'; // <------- Loads some basic styling for contact form 7 plugin
+
+.home {
+  @import 'theme/pages/homepage';
+}
+
+.page-template-default {
+  @import 'theme/pages/default-page';
+}
+
+.page-template-about-page {
+  @import 'theme/pages/about-us-page';
+}
+
+.page-template-contact-page {
+  @import 'theme/pages/contact-page';
+}
+
+.page-template-resources-page {
+  @import 'theme/pages/resources-page';
+}
+
+.page-template-contact-sub-page {
+  @import 'theme/pages/contact-page';
+  @import 'theme/pages/contact-sub-page';
+}
+.page-template-solutions-page {
+  @import 'theme/pages/solutions-page';
+}
+.single {
+  @import 'theme/blog/single';
+}
+
+.page-template-blog-archive {
+  @import 'theme/blog/archive';
+}
+
+.single-guides {
+  @import 'theme/guides/single';
+}
+
+.post-type-archive-guides {
+  @import 'theme/guides/archive';
+}
+
+.post-type-archive-news {
+  @import 'theme/news/archive';
+}
+
+.single-videos {
+  @import 'theme/videos/single';
+}
+
+.post-type-archive-videos {
+  @import 'theme/videos/archive';
+}
+
+.single-webinars {
+  @import 'theme/webinars/single';
+}
+
+.post-type-archive-webinars {
+  @import 'theme/webinars/archive';
+}
+
+.single-team {
+  @import 'theme/team/single';
+}
+
+.post-type-archive-team {
+  @import 'theme/team/archive';
+}
+
+.single-opportunities {
+  @import 'theme/opportunities/single';
+}
+
+.post-type-archive-opportunities {
+  @import 'theme/opportunities/archive';
+}
+
+.single-industries {
+  @import 'theme/industries/single';
+}
+
+.post-type-archive-industries {
+  @import 'theme/industries/archive';
+}

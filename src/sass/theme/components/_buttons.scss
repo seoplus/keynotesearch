@@ -1,0 +1,87 @@
+@mixin font-awesome-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  margin-left: 0.75em;
+}
+
+@mixin btn {
+  display: inline-block;
+  font-family: $lato;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.15;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background: $primary;
+  color: $white;
+  border: 1px solid $primary;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  margin-right: 0.25rem;
+  vertical-align: middle;
+  text-shadow: none;
+  text-decoration: none !important;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $dark-orange;
+    color: $white;
+    outline: 0;
+    border-color: $dark-orange;
+  }
+
+  &.secondary {
+    background: transparent;
+    color: $primary;
+
+    &:hover {
+      border-color: $primary;
+      color: $white;
+      background: $primary;
+    }
+  }
+}
+
+.btn {
+  @include btn;
+
+  &.external {
+    &::after {
+      content: '\f08e';
+      @include font-awesome-icon;
+    }
+  }
+
+  &.arrow {
+    &::after {
+      content: '\f101';
+      @include font-awesome-icon;
+    }
+  }
+
+  &.external {
+    &::after {
+      content: '\f08e';
+      @include font-awesome-icon;
+    }
+  }
+  &.envelope {
+    &::after {
+      content: '\f0e0';
+      @include font-awesome-icon;
+    }
+  }
+  &.btn-blue {
+    background: $dark-grey;
+    border-color: $dark-grey;
+
+    &:hover {
+      background: $gray-900;
+      border-color: $gray-900;
+    }
+  }
+}

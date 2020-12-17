@@ -1,0 +1,83 @@
+.text-on-image-wrapper {
+  position: relative;
+
+  figure {
+    display: flex;
+    margin: 0;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .image-overlay {
+    flex-direction: column;
+    text-align: center;
+    color: $white;
+    @include image-overlay;
+
+    &.orange {
+      background: rgba(255, 102, 0, 0.65);
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    h3 {
+      color: $white;
+      font-size: 6em;
+      font-weight: 700;
+      line-height: 2.2rem;
+      z-index: 3;
+      position: relative;
+      font-family: $lato;
+      text-transform: uppercase;
+      margin-bottom: 4rem;
+
+      @include media-breakpoint-down(md) {
+        font-size: 4em;
+      }
+
+      @include media-breakpoint-down(sm) {
+        line-height: 1;
+        margin-bottom: 4rem;
+      }
+
+      &::before,
+      &::after {
+        @include media-breakpoint-down(sm) {
+          display: none !important;
+        }
+      }
+
+      &::before {
+        content: '';
+        width: 80px;
+        border-left: 1px solid $white;
+        border-bottom: 1px solid $white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: -20px;
+        margin-bottom: -40px;
+        height: 80px;
+      }
+      &::after {
+        content: '';
+        width: 80px;
+        border-right: 1px solid $white;
+        border-top: 1px solid $white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: -20px;
+        margin-top: -46px;
+        height: 80px;
+      }
+    }
+  }
+}

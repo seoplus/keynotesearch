@@ -1,0 +1,104 @@
+@import 'components/header';
+@import 'components/buttons';
+@import 'components/footer';
+
+@import 'components/homepage-header';
+@import 'components/small_cta';
+@import 'components/centered_content';
+@import 'components/page-header';
+@import 'components/post-header';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/our_success-based_guarantee';
+@import 'components/cta-banner';
+@import 'components/text_on_image';
+@import 'components/large_image_text_section';
+@import 'components/need-help';
+@import 'components/testimonials';
+@import 'components/news_and_latest_opportunities';
+@import 'components/plain_image_text_section';
+// custom child theme styles go here
+body {
+  font-family: $raleway;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+a {
+  transition: $transition;
+  text-decoration: none !important;
+}
+
+p {
+  line-height: 2;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+  font-family: $lato;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+
+  &.line {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100px;
+      height: 2px;
+      background: $gray-300;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.orange {
+  color: $primary;
+}
+
+#toTop {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  padding: 0.5rem;
+  background: $white;
+  display: flex;
+  transform: translateY(4rem);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: $primary;
+
+  &:hover {
+    color: $dark-orange;
+  }
+
+  &.show {
+    transform: translateY(0);
+  }
+}
+
+blockquote {
+  border-left: 10px solid #e0e0e5;
+  margin: 1.5rem 0;
+  padding-left: 0.75rem;
+
+  p {
+    font-size: 1.1rem;
+    color: #3b5477;
+  }
+}
+
+.iframe-wrapper {
+  @include iframe_16_9;
+}

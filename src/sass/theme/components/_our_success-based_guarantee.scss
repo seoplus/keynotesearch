@@ -1,0 +1,19 @@
+.our_success-based_guarantee {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background-color: $gray-200;
+
+  .container-fluid {
+    @include media-breakpoint-down(sm) {
+      max-width: map-get($container-max-widths, sm);
+    }
+  }
+
+  figure {
+    margin: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}

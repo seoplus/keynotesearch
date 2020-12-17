@@ -1,0 +1,33 @@
+.article-section {
+  padding-bottom: $section-padding;
+  padding-top: $section-padding;
+}
+
+.articles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  row-gap: 3.5rem;
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+article {
+  figure {
+    position: relative;
+    width: 100%;
+    padding-bottom: 33%;
+    width: 100%;
+  }
+  img {
+    position: absolute;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+}

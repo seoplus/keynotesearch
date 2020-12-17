@@ -1,0 +1,58 @@
+#page-header {
+  height: 100vh;
+  min-height: 800px;
+
+  .col-12 {
+    @include media-breakpoint-up(sm) {
+      margin-top: -200px;
+    }
+  }
+
+  &::before {
+    background-color: rgba(61, 70, 100, 0.86);
+  }
+
+  h1 {
+    margin: 0;
+    line-height: 2.2rem;
+    color: #eceeef;
+  }
+
+  h2 {
+    margin: 1rem auto;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 3.1rem;
+    font-weight: 200;
+    color: #eceeef;
+  }
+
+  p {
+    max-width: 700px;
+    display: block;
+    margin: 0 auto 1em;
+    font-weight: 600;
+    font-size: 0.85rem;
+    opacity: 0.85;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #eceeef;
+  }
+}
+
+main {
+  section {
+    padding-bottom: $section-padding;
+
+    &:first-of-type {
+      padding-top: $section-padding;
+    }
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

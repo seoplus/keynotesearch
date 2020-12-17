@@ -1,0 +1,26 @@
+.small_cta {
+  background: $gray;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  h3 {
+    color: $white;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-family: $raleway;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-color: $white;
+  }
+
+  .row {
+    @include media-breakpoint-down(md) {
+      @include make-container();
+    }
+  }
+}

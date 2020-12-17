@@ -1,0 +1,26 @@
+main {
+  section {
+    padding-bottom: $section-padding;
+
+    &.full-width-content {
+      padding-bottom: $section-padding/4;
+    }
+
+    &:first-of-type {
+      padding-top: $section-padding;
+    }
+  }
+}
+.plain_image_text_section {
+  border-top: none;
+  border-bottom: 1px solid $gray-300;
+  padding-bottom: 0;
+}
+
+.columns-section {
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}

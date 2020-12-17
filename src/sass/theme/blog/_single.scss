@@ -1,0 +1,70 @@
+article {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+.article-header {
+  margin-bottom: 1.5rem;
+
+  h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.categories {
+  padding: 0;
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  list-style: none;
+  display: flex;
+  text-decoration: none !important;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .fa-tags {
+    margin: 0 0.5rem;
+  }
+
+  .separator {
+    color: rgba(25, 36, 51, 0.2);
+    margin: 0.3rem;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.new-prev {
+  padding-bottom: $section-padding;
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    a {
+      @include btn;
+    }
+  }
+}
+
+.top-new-prev {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+}

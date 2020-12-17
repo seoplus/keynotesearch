@@ -1,0 +1,108 @@
+#page-header {
+  .col-12 {
+    max-width: 100% !important;
+    width: 100%;
+    flex: 0 0 100%;
+    margin: 0;
+  }
+}
+.full-width-content {
+  .text-wrapper {
+    max-width: 75%;
+    margin: 0 auto;
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
+  }
+}
+.common-roles {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  .common-roles-wrapper {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .common-role {
+    flex: 0 0 1;
+  }
+
+  .common-roles-text {
+    width: 75%;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    position: relative;
+    width: 100%;
+    padding-bottom: 33%;
+    width: 100%;
+  }
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin-bottom: 0.25em;
+
+      &::before {
+        content: '\f058';
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        margin-right: 0.75em;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.testimonials {
+  border-top: 3px solid $primary;
+}
+
+.cta-banner {
+  margin-bottom: $section-padding;
+}
+
+.first-section-wrapper {
+  section {
+    padding-top: $section-padding;
+  }
+}
+
+.bottom-section-wrapper {
+  section {
+    padding-bottom: $section-padding;
+  }
+}
+
+.end-form {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background: $gray-200;
+
+  h2 {
+    font-weight: 300;
+  }
+}

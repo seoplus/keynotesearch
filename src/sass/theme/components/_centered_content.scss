@@ -1,0 +1,14 @@
+.centered_content {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background: $gray-200;
+
+  p {
+    font-size: 1.125rem !important;
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-family: $lato;
+  }
+}

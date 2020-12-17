@@ -1,0 +1,24 @@
+{
+  "browserSyncOptions": {
+    "proxy": "localhost:8888/keynotesearch/",
+    "notify": false
+  },
+  "browserSyncWatchFiles": [
+    "./build/css/*.min.css",
+    "./build/js/*.min.js",
+    "./**/*.php"
+  ],
+  "paths": {
+    "js": "./build/js",
+    "css": "./build/css",
+    "img": "./img",
+    "imgsrc": "./src/img",
+    "sass": "./src/sass",
+    "node": "./node_modules/",
+    "bower": "./bower_components/",
+    "dev": "./src",
+    "dist": "../dist",
+    "distprod": "../dist-product",
+    "vendor": ""
+  }
+}

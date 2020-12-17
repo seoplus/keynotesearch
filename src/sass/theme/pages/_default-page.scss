@@ -1,0 +1,7 @@
+.page-content {
+  padding-bottom: $section-padding;
+  padding-top: calc(#{$section-padding} + 67px);
+  @include media-breakpoint-down(sm) {
+    padding-top: calc(#{$section-padding} + 80px);
+  }
+}

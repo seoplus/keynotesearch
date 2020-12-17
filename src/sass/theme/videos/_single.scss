@@ -1,0 +1,13 @@
+article {
+  padding-top: calc(#{$section-padding} + 67px);
+  @include media-breakpoint-down(sm) {
+    padding-top: calc(#{$section-padding} + 80px);
+  }
+}
+.iframe-wrapper {
+  @include iframe_16_9;
+}
+
+.article-header {
+  margin-bottom: 0;
+}

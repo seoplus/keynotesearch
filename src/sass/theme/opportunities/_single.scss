@@ -1,0 +1,95 @@
+#post-header {
+  h1 {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.learn-more {
+  padding-top: $section-padding;
+
+  h4 {
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-family: $lato;
+  }
+}
+
+.opportunity-info {
+  padding-top: $section-padding;
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-family: $lato;
+  }
+  .company-position-location {
+    .item {
+      margin-bottom: 0.25rem;
+      color: #436089;
+      line-height: 1.5rem;
+      font-size: 1.25rem;
+
+      span {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.skills {
+  padding-top: $section-padding;
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-family: $lato;
+  }
+
+  .skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: start;
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .skill {
+    border: 1px solid $gray-200;
+    padding: 2rem 1.5rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      i {
+        color: $primary;
+      }
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    p {
+      font-style: italic;
+    }
+  }
+}
+.summary {
+  padding-top: $section-padding;
+
+  h2 {
+    font-family: $lato;
+  }
+}
+
+.need-help {
+  padding-top: $section-padding;
+}

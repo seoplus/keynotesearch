@@ -1,0 +1,264 @@
+/*
+ Theme Name:   Seoplus+
+ Theme URI:    https://seoplus.ca
+ Description:  Custom Wordpress theme made by seoplus+ web team
+ Author:       seoplus+
+ Author URI:   http://seoplus.ca
+ Template:     understrap
+ Version:      0.5.3
+ Text Domain:  understrap-child
+*/
+
+/**
+ * --------------------------------------------------------------------------
+ * General
+ * --------------------------------------------------------------------------
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll To Top */
+
+.show {
+  opacity: 1 !important;
+}
+
+#toTop {
+  width: 54px;
+  height: 54px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #53f;
+  opacity: 0;
+  -webkit-transform: translatey(20px);
+  transform: translatey(20px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  z-index: 90;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#toTop.show {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+#toTop i {
+  font-size: 20px;
+}
+
+#toTop:active,
+#toTop:focus,
+#toTop:hover {
+  background-color: #53f;
+  text-decoration: none;
+  color: #fff;
+}
+
+#toTop,
+.mobile-square {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Header & Nav
+ * --------------------------------------------------------------------------
+ */
+
+/*Increase the depth when calling wp_nav_menu()*/
+
+.menu-item-has-children .menu-item-has-children:hover > .dropdown-menu {
+  display: inline-block;
+  left: 9em;
+  top: -1ex;
+}
+
+.menu-item-has-children .menu-item-has-children:hover {
+  background-color: WhiteSmoke;
+}
+
+.mobile-square {
+  background: #333;
+  width: 58px;
+  height: 50px;
+}
+
+.mobile-square.burger {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0px;
+}
+
+.mobile-square.burger .mobile-burger {
+  width: 25px;
+}
+
+.mobile-square.burger:hover:not(.activated) span:before {
+  top: -10px;
+}
+
+.mobile-square.burger:hover:not(.activated) span:after {
+  bottom: -10px;
+}
+
+.mobile-square.burger span {
+  width: 100%;
+  display: block;
+  height: 2px;
+  border-radius: 0px;
+  background: #fff;
+  position: relative;
+}
+
+.mobile-square.burger span:after,
+.mobile-square.burger span:before {
+  content: '';
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  border-radius: 0px;
+  position: absolute;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.mobile-square.burger span:after {
+  bottom: -7px;
+}
+
+.mobile-square.burger span:before {
+  top: -7px;
+}
+
+.activated .mobile-burger .burger-bars {
+  height: 0;
+}
+
+.activated .mobile-burger .burger-bars:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: calc(25% - 1.5px);
+}
+
+.activated .mobile-burger .burger-bars:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  bottom: calc(25% - 1.5px);
+}
+
+/* Nav */
+
+.navbar-expand-md > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.thenav {
+  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.navbar-collapse .navbar-nav {
+  padding: 5px 15px 20px 15px;
+}
+
+.navbar {
+  padding: 30px 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+/* Onscroll */
+
+.thenav.scroll {
+  background-color: rgba(255, 255, 255, 0.98);
+  position: fixed;
+  -webkit-box-shadow: 0px 3px 30px -15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 30px -15px rgba(0, 0, 0, 0.3);
+}
+
+.thenav.scroll .navbar {
+  padding: 10px 0px;
+}
+
+.navbar-collapse {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  background-color: #53f;
+  z-index: 22;
+}
+
+.goDown {
+  -webkit-animation: goDown 0.2s forwards;
+  animation: goDown 0.2s forwards;
+}
+
+@keyframes goDown {
+  from {
+    transform: translatey(-120%);
+  }
+  to {
+    transform: translatey(0);
+  }
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Sidebar
+ * --------------------------------------------------------------------------
+ */
+
+.widget-area aside {
+  margin-bottom: 30px;
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Media Queries
+ * --------------------------------------------------------------------------
+ */
+
+@media (min-width: 768px) {
+  /* Nav */
+  .navbar-collapse {
+    position: relative;
+  }
+  .menu-item-has-children:hover > .dropdown-menu {
+    display: block;
+  }
+  .navbar-collapse .navbar-nav {
+    padding: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
