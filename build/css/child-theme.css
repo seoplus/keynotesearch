@@ -11825,6 +11825,13 @@ header {
     font-size: inherit;
     text-rendering: auto;
     margin-left: 0.75em; }
+  .btn.download::after, .wpcf7 input.download[type=submit]::after {
+    content: '\f019';
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    margin-left: 0.75em; }
   .btn.envelope::after, .wpcf7 input.envelope[type=submit]::after {
     content: '\f0e0';
     display: inline-block;
@@ -13688,6 +13695,9 @@ blockquote {
       .page-template-blog-archive .blog-categories .featured-blog-cagetory figure img {
         width: 100%; }
 
+.single-guides .site-main {
+  min-height: calc(100vh - 200px); }
+
 .single-guides article {
   padding-top: calc(4.5rem + 67px); }
   @media (max-width: 767.98px) {
@@ -13846,6 +13856,9 @@ blockquote {
   .post-type-archive-news .articles-wrapper article h2 {
     font-size: 1.2rem;
     line-height: 1.5rem; }
+
+.single-videos .site-main {
+  min-height: calc(100vh - 200px); }
 
 .single-videos article {
   padding-top: calc(4.5rem + 67px); }
@@ -14206,13 +14219,12 @@ blockquote {
     border: 1px solid #e9ecef;
     padding: 2rem 1.5rem; }
     .single-opportunities .skills .skill .title {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      display: grid;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      gap: 1rem; }
+      gap: 1rem;
+      grid-template-columns: 1rem 1fr; }
       .single-opportunities .skills .skill .title i {
         color: #ff6601; }
     .single-opportunities .skills .skill h3 {
@@ -14222,6 +14234,15 @@ blockquote {
       margin: 0; }
     .single-opportunities .skills .skill p {
       font-style: italic; }
+
+.single-opportunities .filled {
+  border: 1px solid #e9ecef;
+  padding: 1.75rem;
+  border-left: 2px solid #ff6601;
+  font-size: 1.5rem;
+  font-family: Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif;
+  font-weight: 500;
+  margin: 0; }
 
 .single-opportunities .summary {
   padding-top: 4.5rem; }

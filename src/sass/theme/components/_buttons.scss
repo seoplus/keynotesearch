@@ -69,6 +69,12 @@
       @include font-awesome-icon;
     }
   }
+  &.download {
+    &::after {
+      content: '\f019';
+      @include font-awesome-icon;
+    }
+  }
   &.envelope {
     &::after {
       content: '\f0e0';

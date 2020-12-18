@@ -39,13 +39,15 @@ get_template_part(
               <?php $args = array(
               'post_type'		=> 'team',
               'meta_key'		=> 'team',
-              'meta_value'	=> $department
+              'meta_value'	=> $department,
+              'posts_per_page' => -1
             );
             
             $query = new WP_Query( $args );
             
             if ( $query->have_posts() ) {
-                while ( $query->have_posts() ) { ?>
+                while ( $query->have_posts() ) {
+                  $query->the_post(); ?>
               <div class="team-member">
                 <div class="image-social">
                   <a href='<?php echo get_the_permalink(); ?>'>
@@ -70,7 +72,7 @@ get_template_part(
                   <p><?php echo get_field('role'); ?></p>
                 </div>
               </div>
-              <?php $query->the_post();
+              <?php 
                 }
               }
               wp_reset_postdata(); ?>

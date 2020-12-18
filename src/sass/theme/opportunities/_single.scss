@@ -61,9 +61,10 @@
     padding: 2rem 1.5rem;
 
     .title {
-      display: flex;
+      display: grid;
       align-items: center;
       gap: 1rem;
+      grid-template-columns: 1rem 1fr;
 
       i {
         color: $primary;
@@ -82,6 +83,17 @@
     }
   }
 }
+
+.filled {
+  border: 1px solid #e9ecef;
+  padding: 1.75rem;
+  border-left: 2px solid #ff6601;
+  font-size: 1.5rem;
+  font-family: Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
 .summary {
   padding-top: $section-padding;
 

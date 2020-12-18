@@ -31,10 +31,14 @@ global $wp_query;
     <?php if( have_rows('learn_more') ): ?>
     <section class="container learn-more">
       <div class="row">
-        <div class="col-12">
-          <h3 class="text-center line">
+        <div class="col-12 text-center">
+          <?php if(!get_field('open')) : ?>
+          <h3 class="filled text-center  mb-5 d-inline-block">Opportunity has been filled!</h3>
+          <?php endif; ?>
+          <h3 class=" line">
             <?php echo get_field('tagline'); ?>
           </h3>
+
         </div>
         <?php while( have_rows('learn_more') ) : the_row();?>
         <div class="col-12 col-md-4 mt-3">
@@ -109,6 +113,7 @@ global $wp_query;
     </section>
     <?php endif; ?>
 
+    <?php if(get_field('open')) : ?>
     <section class="need-help container">
       <div class="row">
         <div class="col-12">
@@ -121,6 +126,17 @@ global $wp_query;
         </div>
       </div>
     </section>
+    <?php else:  ?>
+    <section class="need-help container">
+      <div class="row">
+        <div class="col-12">
+          <div class="cta-wrapper">
+            <h3>Opportunity has been filled!</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <?php endif; ?>
 
 
     <?php 	} 
