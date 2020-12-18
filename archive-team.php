@@ -40,7 +40,8 @@ get_template_part(
               'post_type'		=> 'team',
               'meta_key'		=> 'team',
               'meta_value'	=> $department,
-              'posts_per_page' => -1
+              'posts_per_page' => -1,
+              'order' => 'ASC',
             );
             
             $query = new WP_Query( $args );
