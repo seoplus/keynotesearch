@@ -7113,6 +7113,17 @@ function mobileMenuFunc() {
   window.addEventListener('resize', mobileMenuFunc);
 }
 
+function checkForLityLinks(selector) {
+  var items = document.querySelectorAll(selector);
+
+  items.forEach((item) => {
+    if (item.classList.contains('data-lity')) {
+      return item.setAttribute('data-lity', 'true');
+    }
+    return;
+  });
+}
+
 // Youtube API
 var tag = document.createElement('script');
 
@@ -7168,6 +7179,8 @@ document.addEventListener('DOMContentLoaded', function () {
       layoutMode: 'masonry',
     });
   }
+
+  checkForLityLinks('.btn');
 
   window.onload = function () {
     changesOnScroll();

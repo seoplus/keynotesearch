@@ -52,7 +52,7 @@ get_template_part(
                 <div class="image-social">
                   <a href='<?php echo get_the_permalink(); ?>'>
                     <figure>
-                      <?php echo get_the_post_thumbnail(get_the_ID(), 'team-member'); ?>
+                      <?php echo get_field('headshot') ? wp_get_attachment_image( get_field('headshot')['ID'], 'team-member' )  : get_the_post_thumbnail(get_the_ID(), 'team-member'); ?>
                     </figure>
                   </a>
                   <div class="social">
@@ -69,7 +69,7 @@ get_template_part(
                       <?php echo get_the_title(); ?>
                     </a>
                   </h4>
-                  <p><?php echo get_field('role'); ?></p>
+                  <p class="text-uppercase"><?php echo get_field('role'); ?></p>
                 </div>
               </div>
               <?php 

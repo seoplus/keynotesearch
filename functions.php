@@ -29,6 +29,7 @@ function theme_enqueue_styles() {
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'swiper-scripts', get_stylesheet_directory_uri() . '/build/js/swiper.min.js', array(), $the_theme->get( 'Version' ), true );
     wp_enqueue_script( 'isotope-scripts', get_stylesheet_directory_uri() . '/build/js/isotope.min.js', array(), $the_theme->get( 'Version' ), true );
+    wp_enqueue_script( 'lity-scripts', get_stylesheet_directory_uri() . '/build/js/lity.min.js', array('jquery'), $the_theme->get( 'Version' ), true );
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/build/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
@@ -92,8 +93,8 @@ if( function_exists('acf_add_options_page') ) {
 // Custom Image Sizes
 add_action( 'after_setup_theme', 'custom_image_sizes' );
 function custom_image_sizes() {
-    add_image_size( 'post-header-image', 1920 ); // 300 pixels wide (and unlimited height)
-    add_image_size( 'team-member', 700, 700 ); // 300 pixels wide (and unlimited height)
+    add_image_size( 'post-header-image', 1920 ); 
+    add_image_size( 'team-member', 500, 500, array( 'center', 'top' ) ); 
 }
 
 
