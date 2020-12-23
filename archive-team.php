@@ -93,13 +93,8 @@ get_template_part(
             the_row();
             $currItem++; //used to avoid duplicate ids on html elements
 
-            //includes all the layouts that were used by the user in the order that they used it.
-            // located in the components folder only if it exists
-            $componentFile = get_stylesheet_directory() . '/components/' . get_row_layout() . '.php';
-            if (file_exists($componentFile)) {
-                include $componentFile;
-                wp_reset_postdata();
-            }
+            get_template_part('components/'. get_row_layout(), null, array());
+            wp_reset_postdata();
             // End loop.
 
         }; //endwhile

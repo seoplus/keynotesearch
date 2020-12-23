@@ -7,7 +7,7 @@
       <div
         class="col-12 col-md-6 image <?php echo get_sub_field('align_content_center') ? 'd-flex flex-column align-items-center': ''; ?>">
         <figure>
-          <?php echo wp_get_attachment_image( get_sub_field('image')['ID'], 'large' ); ?>
+          <?php echo wp_get_attachment_image( !empty(get_sub_field('image')['ID']) ? get_sub_field('image')['ID'] : get_sub_field('image'), 'large' ); ?>
         </figure>
         <?php echo get_sub_field('text_under_image') ? get_sub_field('text_under_image') : ''; ?>
       </div>
@@ -34,7 +34,7 @@
       <div
         class="col-12 col-md-6 image <?php echo get_sub_field('align_content_center') ? 'd-flex flex-column align-items-center': ''; ?>">
         <figure>
-          <?php echo wp_get_attachment_image( get_sub_field('image')['ID'], 'large' ); ?>
+          <?php echo wp_get_attachment_image( !empty(get_sub_field('image')['ID']) ? get_sub_field('image')['ID'] : get_sub_field('image'), 'large' ); ?>
         </figure>
         <?php echo get_sub_field('text_under_image') ? get_sub_field('text_under_image') : ''; ?>
       </div>
