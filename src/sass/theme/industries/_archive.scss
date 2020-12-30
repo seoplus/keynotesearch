@@ -29,17 +29,19 @@
     width: 100%;
   }
 
-  .industry-wrapper {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid $gray-300;
-    color: $dark-gray;
-
+  a {
     &:hover {
       h3 {
         color: $primary;
       }
     }
+  }
+
+  .industry-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $gray-300;
+    color: $dark-gray;
 
     h3 {
       transition: $transition;

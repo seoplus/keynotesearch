@@ -14584,6 +14584,8 @@ blockquote {
   @media (max-width: 767.98px) {
     .post-type-archive-industries .industry {
       width: 100%; } }
+  .post-type-archive-industries .industry a:hover h3 {
+    color: #ff6601; }
   .post-type-archive-industries .industry .industry-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14594,8 +14596,6 @@ blockquote {
             flex-direction: column;
     border: 1px solid #dee2e6;
     color: #192433; }
-    .post-type-archive-industries .industry .industry-wrapper:hover h3 {
-      color: #ff6601; }
     .post-type-archive-industries .industry .industry-wrapper h3 {
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease; }
