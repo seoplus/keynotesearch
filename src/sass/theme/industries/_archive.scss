@@ -34,6 +34,16 @@
     flex-direction: column;
     border: 1px solid $gray-300;
     color: $dark-gray;
+
+    &:hover {
+      h3 {
+        color: $primary;
+      }
+    }
+
+    h3 {
+      transition: $transition;
+    }
   }
 
   figure {

@@ -14591,6 +14591,11 @@ blockquote {
             flex-direction: column;
     border: 1px solid #dee2e6;
     color: #192433; }
+    .post-type-archive-industries .industry .industry-wrapper:hover h3 {
+      color: #ff6601; }
+    .post-type-archive-industries .industry .industry-wrapper h3 {
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
   .post-type-archive-industries .industry figure {
     width: 100%;
     padding-bottom: 60%;
