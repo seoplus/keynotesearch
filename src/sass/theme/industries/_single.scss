@@ -81,19 +81,23 @@
   border-top: 3px solid $primary;
 }
 
-.cta-banner {
-  margin-bottom: $section-padding;
-}
-
 .first-section-wrapper {
   section {
     padding-top: $section-padding;
+  }
+
+  .cta-banner {
+    margin-top: $section-padding !important;
   }
 }
 
 .bottom-section-wrapper {
   section {
     padding-bottom: $section-padding;
+  }
+
+  .cta-banner {
+    margin-bottom: $section-padding !important;
   }
 }
 

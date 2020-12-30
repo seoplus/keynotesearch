@@ -12193,7 +12193,7 @@ footer {
 
 .cta-banner {
   background: #ff6601;
-  padding-top: 2.25rem;
+  padding-top: 2.25rem !important;
   padding-bottom: 0 !important; }
   .cta-banner figure {
     margin: 0; }
@@ -14540,14 +14540,17 @@ blockquote {
 .single-industries .testimonials {
   border-top: 3px solid #ff6601; }
 
-.single-industries .cta-banner {
-  margin-bottom: 4.5rem; }
-
 .single-industries .first-section-wrapper section {
   padding-top: 4.5rem; }
 
+.single-industries .first-section-wrapper .cta-banner {
+  margin-top: 4.5rem !important; }
+
 .single-industries .bottom-section-wrapper section {
   padding-bottom: 4.5rem; }
+
+.single-industries .bottom-section-wrapper .cta-banner {
+  margin-bottom: 4.5rem !important; }
 
 .single-industries .end-form {
   padding-top: 4.5rem;
