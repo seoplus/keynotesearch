@@ -77,10 +77,6 @@
   }
 }
 
-.testimonials {
-  border-top: 3px solid $primary;
-}
-
 .first-section-wrapper {
   section {
     padding-top: $section-padding;
@@ -89,11 +85,19 @@
   .cta-banner {
     margin-top: $section-padding !important;
   }
+
+  .testimonials {
+    padding-bottom: 0;
+  }
 }
 
 .bottom-section-wrapper {
   section {
     padding-bottom: $section-padding;
+  }
+
+  .testimonials {
+    padding-top: 0;
   }
 
   .cta-banner {

@@ -14537,17 +14537,20 @@ blockquote {
         margin-right: 0.75em;
         color: #ff6601; }
 
-.single-industries .testimonials {
-  border-top: 3px solid #ff6601; }
-
 .single-industries .first-section-wrapper section {
   padding-top: 4.5rem; }
 
 .single-industries .first-section-wrapper .cta-banner {
   margin-top: 4.5rem !important; }
 
+.single-industries .first-section-wrapper .testimonials {
+  padding-bottom: 0; }
+
 .single-industries .bottom-section-wrapper section {
   padding-bottom: 4.5rem; }
+
+.single-industries .bottom-section-wrapper .testimonials {
+  padding-top: 0; }
 
 .single-industries .bottom-section-wrapper .cta-banner {
   margin-bottom: 4.5rem !important; }
