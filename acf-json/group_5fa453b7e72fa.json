@@ -1074,9 +1074,9 @@
                         },
                         {
                             "key": "field_5fb2eba9d8ed0",
-                            "label": "Image on left or right?",
-                            "name": "image_on_left_or_right",
-                            "type": "radio",
+                            "label": "Image on left?",
+                            "name": "image_on_left",
+                            "type": "true_false",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1085,16 +1085,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "left": "left",
-                                "right": "right"
-                            },
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "default_value": "left",
-                            "layout": "",
-                            "return_format": "",
-                            "save_other_choice": 0
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_5fb2ebd7d8ed8",
@@ -1408,5 +1403,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608743542
+    "modified": 1608743980
 }

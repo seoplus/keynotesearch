@@ -7,7 +7,13 @@ get_header();
 
 $container = get_theme_mod('understrap_container_type');
 
-get_template_part('components/page-header', 'industries');
+get_template_part(
+  'components/page-header', 
+  'industries', 
+  array(
+    'page_header' => get_field('page_header'),
+    'featured_image_ID' =>  get_field('page_header')['image']['ID'],
+  ));
 
 ?>
 
