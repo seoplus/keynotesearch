@@ -13695,13 +13695,7 @@ blockquote {
   font-size: 1.9rem;
   line-height: 1.9rem;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-decoration: none !important;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 0.5rem;
   text-transform: uppercase; }
   @media (max-width: 767.98px) {
     .single .categories {
@@ -13714,6 +13708,14 @@ blockquote {
     margin: 0.3rem; }
   .single .categories a {
     text-decoration: none !important; }
+  .single .categories li {
+    display: inline-block;
+    line-height: 1.2; }
+    .single .categories li::after {
+      content: ',';
+      margin-right: 0.5rem; }
+    .single .categories li:last-child::after {
+      display: none; }
 
 .single .new-prev {
   padding-bottom: 4.5rem; }
@@ -13773,13 +13775,16 @@ blockquote {
   font-weight: 600;
   text-decoration: none; }
 
+.archive.category .blog,
 .page-template-blog-archive .blog {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem; }
 
+.archive.category aside,
 .page-template-blog-archive aside {
   display: grid;
   gap: 1rem; }
+  .archive.category aside > h3,
   .page-template-blog-archive aside > h3 {
     border: 1px solid #e9ecef;
     font-size: 1rem;
@@ -13788,26 +13793,32 @@ blockquote {
     font-family: "Lato", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 400;
     margin-bottom: 0; }
+  .archive.category aside .side-cat,
   .page-template-blog-archive aside .side-cat {
     background: #f8f9fa;
     border-radius: 5px;
     position: relative;
     padding: 0.75rem; }
+    .archive.category aside .side-cat h3,
     .page-template-blog-archive aside .side-cat h3 {
       margin: 0 0 0.75em 0;
       font-size: 1.1rem;
       line-height: 1.3rem;
       font-weight: 700;
       color: #6c757d; }
+  .archive.category aside a,
   .page-template-blog-archive aside a {
     color: #0275d8;
     font-weight: 400;
     line-height: 1.3rem;
     font-size: 1rem; }
+    .archive.category aside a:hover,
     .page-template-blog-archive aside a:hover {
       color: #ff6601; }
+  .archive.category aside hr,
   .page-template-blog-archive aside hr {
     margin: 1.5rem 0; }
+  .archive.category aside ul,
   .page-template-blog-archive aside ul {
     padding: 0;
     margin: 0;
@@ -13815,12 +13826,14 @@ blockquote {
     display: grid;
     gap: 0.75rem; }
 
+.archive.category article figure,
 .page-template-blog-archive article figure {
   position: relative;
   width: 100%;
   padding-bottom: 33%;
   width: 100%; }
 
+.archive.category article img,
 .page-template-blog-archive article img {
   position: absolute;
   border-radius: 0.25rem;
@@ -13831,59 +13844,76 @@ blockquote {
   -o-object-fit: cover;
      object-fit: cover; }
 
+.archive.category .articles-wrapper,
 .page-template-blog-archive .articles-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   row-gap: 3.5rem; }
   @media (max-width: 767.98px) {
+    .archive.category .articles-wrapper,
     .page-template-blog-archive .articles-wrapper {
       grid-template-columns: 1fr; } }
+  .archive.category .articles-wrapper article:first-child,
   .page-template-blog-archive .articles-wrapper article:first-child {
     max-width: 590px;
     grid-column-start: 1;
     grid-column-end: -1; }
+  .archive.category .articles-wrapper article h2,
   .page-template-blog-archive .articles-wrapper article h2 {
     font-size: 1.2rem;
     line-height: 1.5rem; }
 
+.archive.category .blog-categories,
 .page-template-blog-archive .blog-categories {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem; }
   @media (max-width: 767.98px) {
+    .archive.category .blog-categories,
     .page-template-blog-archive .blog-categories {
       padding-top: 0; } }
+  .archive.category .blog-categories h3,
   .page-template-blog-archive .blog-categories h3 {
     font-size: 1.5rem;
     font-family: "Lato", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 400; }
+  .archive.category .blog-categories .featured-blog-categories,
   .page-template-blog-archive .blog-categories .featured-blog-categories {
     display: grid;
     margin-top: 1rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem; }
     @media (max-width: 991.98px) {
+      .archive.category .blog-categories .featured-blog-categories,
       .page-template-blog-archive .blog-categories .featured-blog-categories {
         grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 767.98px) {
+      .archive.category .blog-categories .featured-blog-categories,
       .page-template-blog-archive .blog-categories .featured-blog-categories {
         grid-template-columns: 1fr; } }
+  .archive.category .blog-categories .featured-blog-cagetory,
   .page-template-blog-archive .blog-categories .featured-blog-cagetory {
     background: #f8f9fa; }
+    .archive.category .blog-categories .featured-blog-cagetory a,
     .page-template-blog-archive .blog-categories .featured-blog-cagetory a {
       color: #495057; }
+      .archive.category .blog-categories .featured-blog-cagetory a:hover,
       .page-template-blog-archive .blog-categories .featured-blog-cagetory a:hover {
         color: #ff6601; }
+    .archive.category .blog-categories .featured-blog-cagetory .content,
     .page-template-blog-archive .blog-categories .featured-blog-cagetory .content {
       padding: 1rem; }
+      .archive.category .blog-categories .featured-blog-cagetory .content h4,
       .page-template-blog-archive .blog-categories .featured-blog-cagetory .content h4 {
         line-height: 1.5rem;
         margin-bottom: 0;
         font-size: 1.25rem;
         font-family: "Lato", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
+    .archive.category .blog-categories .featured-blog-cagetory figure,
     .page-template-blog-archive .blog-categories .featured-blog-cagetory figure {
       margin-bottom: 0;
       width: 100%; }
+      .archive.category .blog-categories .featured-blog-cagetory figure img,
       .page-template-blog-archive .blog-categories .featured-blog-cagetory figure img {
         width: 100%; }
 

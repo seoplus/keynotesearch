@@ -1,6 +1,6 @@
 <section id="post-header" class="d-flex">
   <figure class="background-image">
-    <?php echo wp_get_attachment_image( get_field('post_header_image', 'options')['ID'], 'post-header-image' ); ?>
+    <?php echo get_the_post_thumbnail( get_the_ID(), 'post-header-image' ); ?>
   </figure>
   <div class="container h-100 d-flex align-items-center justify-content-center">
     <div class="row w-100">

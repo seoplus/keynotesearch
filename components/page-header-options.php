@@ -12,7 +12,7 @@ $featured_image_ID = $args['featured_image_ID'];
     <div class="row w-100">
       <div class="col-12 col-md-10 offset-md-1 text-white text-center">
         <h1><?php echo $page_header['title'] ? $page_header['title'] : get_the_title(); ?></h1>
-        <?php if($page_header['subtitle']) : ?><h2><?php echo $page_header['subtitle']; ?></h2><?php endif; ?>
+        <?php if(!empty($page_header['subtitle'])) : ?><h2><?php echo $page_header['subtitle']; ?></h2><?php endif; ?>
       </div>
     </div>
   </div>

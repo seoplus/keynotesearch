@@ -16,10 +16,10 @@ article {
   font-size: 1.9rem;
   line-height: 1.9rem;
   list-style: none;
-  display: flex;
+  // display: flex;
   text-decoration: none !important;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  // flex-wrap: wrap;
+  // gap: 0.5rem;
   text-transform: uppercase;
 
   @include media-breakpoint-down(sm) {
@@ -38,6 +38,22 @@ article {
 
   a {
     text-decoration: none !important;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 1.2;
+
+    &::after {
+      content: ',';
+      margin-right: 0.5rem;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
   }
 }
 

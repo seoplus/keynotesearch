@@ -33,12 +33,14 @@ global $wp_query;
           <div class="article-header">
             <h2><?php echo get_the_title(); ?></h2>
             <ul class="categories">
+              <span class="separator">/</span><i class="fa fa-tags" aria-hidden="true"></i>
               <?php 
             $categories = get_the_category();
             foreach($categories as $category) {
-              echo '<li><span class="separator">/</span><i class="fa fa-tags" aria-hidden="true"></i><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+              echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
             }
-            ?></ul>
+            ?>
+            </ul>
           </div>
           <?php echo apply_filters( 'the_content', get_the_content() ) ?>
         </div>
