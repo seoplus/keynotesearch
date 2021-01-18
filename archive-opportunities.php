@@ -25,6 +25,47 @@ get_template_part(
 <div class="wrapper pb-0 pt-0" id="page-wrapper">
   <main class="site-main" id="main">
 
+    <?php
+    $featured_posts = get_field('featured_opportunities', 'options');
+    $count = 0;
+    if( $featured_posts ): ?>
+    <section class="featured-opportunities">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="text-center line">Featured Opportunities</h3>
+            <div class="row">
+              <?php foreach( $featured_posts as $post ): 
+            setup_postdata($post); ?>
+              <article class="col-12 col-md-4">
+                <a href="<?php the_permalink(); ?>">
+                  <div class="cta">Featured Opportunity</div>
+                  <h4><?php the_title(); ?></h4>
+                </a>
+              </article>
+              <?php 
+            
+              $count++;
+              if($count == 3) {
+                break;
+              }
+              endforeach; ?>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <?php 
+    // Reset the global post object so that the rest of the page works correctly.
+    wp_reset_postdata(); ?>
+    <?php endif; ?>
+
+
+
+
     <section class="article-section">
       <div class="container">
         <div class="row">

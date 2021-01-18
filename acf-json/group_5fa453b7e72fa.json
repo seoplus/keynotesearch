@@ -1271,6 +1271,28 @@
             ]
         },
         {
+            "key": "field_6005f5e8b1dee",
+            "label": "Featured Opportunities",
+            "name": "featured_opportunities",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "opportunities"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
             "key": "field_5fb7e7b28dd51",
             "label": "Industries",
             "name": "",
@@ -1403,5 +1425,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608743980
+    "modified": 1611003409
 }
