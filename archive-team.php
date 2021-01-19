@@ -24,7 +24,7 @@ get_template_part(
 
 <div class="wrapper pb-0 pt-0" id="page-wrapper">
   <main class="site-main" id="main">
-    <?php $departments = array('leadership', 'delivery'); ?>
+    <?php $departments = array('leadership', 'delivery', 'integration'); ?>
 
     <?php foreach($departments as $department) { ?>
 

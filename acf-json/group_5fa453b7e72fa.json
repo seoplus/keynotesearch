@@ -907,6 +907,25 @@
             "delay": 0
         },
         {
+            "key": "field_6007380f6f429",
+            "label": "Integration Team Intro",
+            "name": "integration_team_intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5fb2ea63d4331",
             "label": "Team Components",
             "name": "team_components",
@@ -1425,5 +1444,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1611003409
+    "modified": 1611085861
 }
