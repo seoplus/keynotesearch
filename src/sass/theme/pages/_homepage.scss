@@ -5,3 +5,11 @@
     line-height: 2rem;
   }
 }
+
+.button-wrapper {
+  .btn {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

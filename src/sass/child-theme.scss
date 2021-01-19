@@ -18,6 +18,10 @@
   @import 'theme/pages/homepage';
 }
 
+.error404 {
+  @import 'theme/pages/404';
+}
+
 .page-template-default {
   @import 'theme/pages/default-page';
 }

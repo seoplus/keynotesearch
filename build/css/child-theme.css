@@ -13234,6 +13234,25 @@ blockquote {
   font-size: 1.2rem;
   line-height: 2rem; }
 
+@media (max-width: 767.98px) {
+  .home .button-wrapper .btn,
+  .home .button-wrapper .wpcf7 input[type=submit], .wpcf7 .home .button-wrapper input[type=submit] {
+    margin-bottom: 0.5rem; } }
+
+.error404 .site-main .container {
+  min-height: 80vh;
+  padding-top: calc(4.5rem + 67px);
+  padding-bottom: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 767.98px) {
+    .error404 .site-main .container {
+      padding-top: calc(4.5rem + 80px); } }
+
 .page-template-default .page-content {
   padding-bottom: 4.5rem;
   padding-top: calc(4.5rem + 67px); }

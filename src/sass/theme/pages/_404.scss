@@ -1,0 +1,12 @@
+.site-main {
+  .container {
+    min-height: 80vh;
+    padding-top: calc(#{$section-padding} + 67px);
+    padding-bottom: $section-padding;
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+      padding-top: calc(#{$section-padding} + 80px);
+    }
+  }
+}
