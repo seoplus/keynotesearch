@@ -3,6 +3,73 @@
     "title": "Single Team Member",
     "fields": [
         {
+            "key": "field_60073d7c94df6",
+            "label": "Banner?",
+            "name": "banner",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_60073d9594df8",
+            "label": "Banner message",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60073d7c94df6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "If Banner is active then only the featured image will show",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_60073d8894df7",
+            "label": "Banner Link",
+            "name": "banner_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60073d7c94df6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5fac25609d3e3",
             "label": "Role",
             "name": "role",
@@ -377,5 +444,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1611085785
+    "modified": 1611087310
 }

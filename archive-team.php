@@ -51,11 +51,14 @@ get_template_part(
                   $query->the_post(); ?>
               <div class="team-member">
                 <div class="image-social">
-                  <a href='<?php echo get_the_permalink(); ?>'>
+                  <a
+                    href='<?php echo get_field('banner_link')['url'] ? get_field('banner_link')['url'] : get_the_permalink(); ?>'>
                     <figure>
                       <?php echo get_field('headshot') ? wp_get_attachment_image( get_field('headshot')['ID'], 'team-member' )  : get_the_post_thumbnail(get_the_ID(), 'team-member'); ?>
                     </figure>
                   </a>
+
+                  <?php if(!get_field('banner')): ?>
                   <div class="social">
                     <ul>
                       <li><a href="<?php echo get_field('linkedin'); ?>" target="_blank"><i
@@ -63,7 +66,9 @@ get_template_part(
                       <li><a href="mailto:<?php echo get_field('email'); ?>"><i class="fa fa-envelope"></i></a></li>
                     </ul>
                   </div>
+                  <?php endif; ?>
                 </div>
+                <?php if(!get_field('banner')): ?>
                 <div class="info text-center">
                   <h4>
                     <a href='<?php echo get_the_permalink(); ?>'>
@@ -72,6 +77,7 @@ get_template_part(
                   </h4>
                   <p class="text-uppercase"><?php echo get_field('role'); ?></p>
                 </div>
+                <?php endif; ?>
               </div>
               <?php 
                 }
