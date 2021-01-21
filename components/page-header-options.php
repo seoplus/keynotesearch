@@ -2,9 +2,10 @@
 
 $page_header = $args['page_header'];
 $featured_image_ID = $args['featured_image_ID'];
+$id = $args['id'];
 
 ?>
-<section id="page-header" class="d-flex">
+<section id="<?php echo $id ? $id : 'page-header'; ?>" class="d-flex">
   <figure class="background-image">
     <?php echo wp_get_attachment_image($featured_image_ID, 'post-header-image'); ?>
   </figure>

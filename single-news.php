@@ -7,7 +7,17 @@ get_header();
 
 $container = get_theme_mod('understrap_container_type');
 
-get_template_part('/components/post-header');
+get_template_part(
+  'components/page-header', 
+  'options', 
+  array(
+    'page_header' => array(
+      'title' => get_the_title(),
+    ),
+    'id' => 'post-header',
+    'featured_image_ID' =>  !empty(get_field('header_image')) ? get_field('header_image')['ID'] : get_post_thumbnail_id(),
+  )
+);
 
 global $wp_query;
 ?>
