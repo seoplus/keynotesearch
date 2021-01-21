@@ -47,7 +47,7 @@ include get_stylesheet_directory() . '/components/page-header.php';
               <article class="blog-article">
                 <a href="<?php echo get_the_permalink(); ?>" class="image">
                   <figure>
-                    <?php echo get_the_post_thumbnail(get_the_ID(), 'large') ?>
+                    <?php echo !empty(get_field('feed_image')) ? wp_get_attachment_image(get_field('feed_image')['ID'], 'large') : get_the_post_thumbnail(get_the_ID(), 'large') ?>
                   </figure>
                 </a>
                 <div class="info">
